@@ -1,0 +1,20 @@
+import numpy as np
+import pandas as pd
+from sklearn.decomposition import TruncatedSVD
+
+# --- 1. THE DATASET (Users rating movies out of 5 stars)
+# 0 means the user hasn't watched or rated that movie yet.
+data = {
+    'MovieA: Stranger Things (Sci-Fi)': [5, 4, 0, 0, 0],
+    'MovieB: Interstellar (Sci-Fi)': [4, 5, 0, 0, 0],
+    'MovieC: Wednesday (Supernatural)': [0, 0, 3, 2, 0],
+…alex_unwatched = rating_matrix.loc['Alex_The_New_User'] == 0
+alex_predictions = predictions_df.loc['Alex_The_New_User', alex_unwatched]
+
+# Sort predictions to find the highest score
+best_movie = alex_predictions.idxmax()
+predicted_score = alex_predictions.max()
+
+print(f"Alex has not watched: Stranger Things, Interstellar, or Wednesday.")
+print(f"Based on similar taste clusters, Netflix predicts Alex will give '{best_movie}' a {predicted_score}/5 rating!")
+print(f"🎬 Action: Push '{best_movie}' to Alex's homepage banner!")
