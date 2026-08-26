@@ -1,0 +1,14 @@
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+# -----------------------------
+# Sample Web Pages (Documents)
+# -----------------------------
+documents = [
+    "Python is a programming language used for AI and Machine Learning.",
+    "Docker is a containerization platform used for deploying applications.",
+    "Convolutional Neural Networks are used in image classification.",
+…for index, score in ranked:
+    print(f"Score: {score:.3f}")
+    print(documents[index])
+    print("-"*60)
