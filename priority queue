@@ -1,0 +1,14 @@
+from queue import PriorityQueue
+
+# Graph representation
+graph = {
+    'A': [('B', 4), ('C', 3)],
+        'B': [('D', 5), ('E', 12)],
+            'C': [('E', 10)],
+                'D': [('G', 7)],
+                    'E': [('G', 2)],
+                        'G': []
+…
+                                                                                                                                                                                                                                         …                                                                                                                                                                                                                                                path = astar('A', 'G')
+
+                                                                                                                                                                                                                                            
