@@ -1,0 +1,20 @@
+from queue import PriorityQueue
+
+# Graph representation
+graph = {
+    'A': ['B', 'C'],
+    'B': ['D', 'E'],
+    'C': ['F', 'G'],
+    'D': [],
+    'E': [],
+    'F': [],
+…        if current == goal:
+            print("\nGoal Reached!")
+            return
+
+        for neighbor in graph[current]:
+            if neighbor not in visited:
+                pq.put((heuristic[neighbor], neighbor))
+
+# Run the algorithm
+greedy_best_first_search('A', 'G')
