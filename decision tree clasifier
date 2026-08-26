@@ -1,0 +1,40 @@
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Input features
+X = [
+    [1, 60],
+    [2, 65],
+    [3, 70],
+    [4, 75],
+    [5, 80],
+    [6, 85],
+    [7, 90],
+    [2, 50]
+]
+
+# Output
+y = [
+    "Fail",
+    "Fail",
+    "Pass",
+    "Pass",
+    "Pass",
+    "Pass",
+    "Pass",
+    "Fail"
+]
+
+# Create the Decision Tree
+model = DecisionTreeClassifier(criterion="entropy", max_depth=3)
+
+# Train the model
+model.fit(X, y)
+
+# Predict a new student
+new_student = [[4, 78]]
+
+prediction = model.predict(new_student)
+
+print("Prediction:", prediction[0])
