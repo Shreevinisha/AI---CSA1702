@@ -1,0 +1,19 @@
+# Graph
+graph = {
+    'A': [('B', 1), ('C', 4)],
+        'B': [('D', 2)],
+            'C': [('D', 1)],
+                'D': []
+                }
+
+                # Heuristic values
+                h = {
+…                                                    if current == goal:
+                                                            print("Goal Reached!")
+                                                                    break
+
+                                                                        visited.append(current)
+
+                                                                            for neighbor, cost in graph[current]:
+                                                                                    if neighbor not in visited:
+                                                                                                open_list.append((neighbor, g + cost))
