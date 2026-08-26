@@ -1,0 +1,17 @@
+grid = [
+    ['R', ' ', 'T'],
+    ['X', 'X', ' '],
+    [' ', ' ', ' ']
+]
+
+# Robot position
+row = 0
+col = 0
+
+…        print("Move Right")
+    # Otherwise Move Down
+    elif row < 2 and grid[row+1][col] != 'X':
+        row += 1
+        print("Move Down")
+
+print("\nTarget Reached!")
