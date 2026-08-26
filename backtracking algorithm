@@ -1,0 +1,19 @@
+# Variables (Students)
+students = ["A", "B", "C"]
+
+# Domain (Available Seats)
+seats = [1, 2, 3]
+
+# Dictionary to store assignments
+assignment = {}
+
+# Function to check whether assigning a seat is valid
+…    return False
+
+# Solve the CSP
+if backtrack(0):
+    print("Solution Found:")
+    for student, seat in assignment.items():
+        print(f"{student} --> Seat {seat}")
+else:
+    print("No solution exists.")
